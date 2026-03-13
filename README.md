@@ -22,3 +22,14 @@ Questa versione serve a validare che l'infrastruttura minima sia funzionante:
 - collegamento frontend <-> backend
 
 Da qui si puo poi estendere la logica applicativa (autenticazione, operazioni bancarie, gestione utenti, ecc.).
+
+## per farlo partire
+
+frontend:
+- npx expo start
+
+backend:
+- uvicorn main:app --host 0.0.0.0 --port 8000 --reload (**nella venv**: venv/Scripts/activate.ps1)
+
+database:
+- docker-compose up -d
